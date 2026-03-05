@@ -1,0 +1,399 @@
+/* ============================================================
+   FOREVER HOME 🐾 — Stylesheet
+   Warm, organic, nature-inspired aesthetic
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Variables ──────────────────────────────────────────── */
+:root {
+    --cream:      #faf6f0;
+    --warm-white: #fff9f2;
+    --bark:       #3b2a1a;
+    --bark-light: #5c4433;
+    --amber:      #c97b2e;
+    --amber-pale: #f0d9b5;
+    --sage:       #6b8f71;
+    --sage-pale:  #d6e8d9;
+    --terra:      #c05a3a;
+    --terra-pale: #f5d5cc;
+    --text:       #2e1f0f;
+    --text-muted: #7a6050;
+    --border:     #e4d5c3;
+    --shadow:     rgba(59, 42, 26, 0.10);
+    --radius:     12px;
+    --radius-lg:  20px;
+}
+
+/* ── Reset & Base ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background-color: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+    background-image:
+        radial-gradient(ellipse at 10% 0%, rgba(201,123,46,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse at 90% 100%, rgba(107,143,113,0.08) 0%, transparent 60%);
+}
+
+/* ── Typography ─────────────────────────────────────────── */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--bark);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.2rem; font-weight: 700; }
+h2 { font-size: 1.6rem; font-weight: 600; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+
+p  { line-height: 1.7; color: var(--text-muted); }
+a  { color: var(--amber); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--bark); }
+
+/* ── Navigation ─────────────────────────────────────────── */
+nav {
+    background: var(--bark);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 64px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--amber-pale);
+    letter-spacing: 0.02em;
+    margin-right: auto;
+}
+
+nav a {
+    color: rgba(255,249,242,0.75);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 0.01em;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.10);
+    color: var(--warm-white);
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+main, .container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.page-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+.card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+/* ── Buttons ────────────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    text-decoration: none;
+}
+
+.btn:hover  { transform: translateY(-1px); box-shadow: 0 4px 12px var(--shadow); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+    background: var(--amber);
+    color: #fff;
+}
+.btn-primary:hover { background: #b56c22; color: #fff; }
+
+.btn-secondary {
+    background: var(--sage-pale);
+    color: var(--sage);
+}
+.btn-secondary:hover { background: var(--sage); color: #fff; }
+
+.btn-danger {
+    background: var(--terra-pale);
+    color: var(--terra);
+}
+.btn-danger:hover { background: var(--terra); color: #fff; }
+
+.btn-sm { padding: 0.35rem 0.8rem; font-size: 0.82rem; }
+
+/* ── Tables ─────────────────────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--warm-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+thead {
+    background: var(--bark);
+    color: var(--amber-pale);
+}
+
+thead th {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1rem 1.25rem;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+}
+
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover      { background: var(--cream); }
+
+tbody td {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    vertical-align: middle;
+}
+
+.actions { display: flex; gap: 0.5rem; }
+
+/* ── Forms ──────────────────────────────────────────────── */
+form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--bark-light);
+    letter-spacing: 0.02em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    background: var(--warm-white);
+    color: var(--text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(201,123,46,0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+/* ── Alert / Flash Messages ─────────────────────────────── */
+.alert {
+    padding: 0.9rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    animation: slideDown 0.3s ease;
+}
+
+.alert.success {
+    background: var(--sage-pale);
+    color: #3a6b40;
+    border-left: 4px solid var(--sage);
+}
+
+.alert.success::before { content: '✓'; font-weight: 700; }
+
+.alert.error {
+    background: var(--terra-pale);
+    color: #8b2c14;
+    border-left: 4px solid var(--terra);
+}
+
+.alert.error::before { content: '!'; font-weight: 700; }
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Error text (inline validation) ────────────────────── */
+.error-text {
+    color: var(--terra);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    background: var(--terra-pale);
+    border-radius: 8px;
+}
+
+/* ── Animal listing cards (public view) ─────────────────── */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.animal-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(59,42,26,0.14);
+}
+
+.animal-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+}
+
+.animal-card .species {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.75rem;
+}
+
+.animal-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--amber-pale);
+    color: var(--bark-light);
+}
+
+/* ── Hero (homepage) ────────────────────────────────────── */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--bark);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+/* ── Delete confirmation ────────────────────────────────── */
+.confirm-box {
+    background: var(--terra-pale);
+    border: 1.5px solid var(--terra);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirm-box p {
+    color: #8b2c14;
+    font-weight: 500;
+}
+
+/* ── Utility ────────────────────────────────────────────── */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem;   }
+.mt-3 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.text-muted { color: var(--text-muted); font-size: 0.9rem; }
+.text-center { text-align: center; }
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+    nav { padding: 0 1rem; gap: 1rem; }
+    main, .container { margin: 1.5rem auto; }
+    h1 { font-size: 1.7rem; }
+    .hero h1 { font-size: 2rem; }
+    .page-header { flex-direction: column; gap: 1rem; }
+    table { font-size: 0.85rem; }
+}
